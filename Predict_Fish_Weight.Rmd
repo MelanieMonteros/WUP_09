@@ -60,8 +60,8 @@ summary(PerchModel5)
 
 
 ```{r}
-regsubsets.out <- regsubsets(Weight~., data=Perch, nbest=1, nvmax=NULL, force.in=NULL, force.out=NULL, method= "exhausted"")
-summary.out <- summary(regsubset.out)
+regsubsets.out <-  regsubsets(Weight~., data=Perch, nbest=1, nvmax=NULL, force.in=NULL, force.out=NULL, method="exhaustive")
+summary.out <- summary(regsubsets.out)
 ```
 
 ```{r}
