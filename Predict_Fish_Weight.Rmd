@@ -129,7 +129,14 @@ Interpreting our results we see that the best two element models is using Length
 
 ## Roach
 
+```{r}
+Roach <- filter(Fish,Species=="Roach")
+Roach <- select(Roach,"Species")
+```
+
+
 ### Best Models
+
 
 ### Best Two regressor model
 
