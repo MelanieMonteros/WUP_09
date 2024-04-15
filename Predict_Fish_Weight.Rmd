@@ -136,8 +136,8 @@ Roach <- select(Roach,"Species")
 
 
 ### Best Models
-
-
-### Best Two regressor model
+ Interpreting our results we see that the best two element models is using Length 3 and width. The best overall model the 5 element model using length 3 and width using adjusted R square. 
 
 ## Final Summary Statements
+
+i learned how to use leaps and learned how to start codes from scratch removing statements until I got the best adjusted R squared model.
