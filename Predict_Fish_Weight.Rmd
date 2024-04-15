@@ -93,8 +93,35 @@ best.model <- lm(Weight~Height+Width,data=Perch)
 summary(best.model)
 ```
 
+Interpreting our results we see that the best two element models is using height and width. The best overall model is also the 2 element model using height and width using adjusted R squared.
+
+
 
 ## Pike
+
+```{r}
+Pike <- filter(Fish,Species=="Pike")
+Pike <- select(Pike,-"Species")
+```
+
+
+```{r}
+library(leaps)
+regsubsets.out <-
+regsubsets(Weight ~ .,
+data = Pike,
+nbest = 1, # 1 best model for each number of predictors
+nvmax = NULL, # NULL for no limit on number of variables
+force.in = NULL, force.out = NULL,
+method = "exhaustive")
+
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="bottom",main="Adjusted R^2")
+```
+
+Interpreting our results we see that the best two element models is using Length 1 and Length 3. The best overall model the 5 element model using adjusted R square. 
 
 ### Best Models
 
